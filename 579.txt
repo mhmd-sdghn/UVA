@@ -1,0 +1,23 @@
+#include <iostream>
+#include<iomanip>
+using namespace std;
+
+int main()
+{
+	float h, m;
+	char a;
+	cout << setprecision(3);
+	cout << fixed;
+	cin >> h >> a >> m;
+		while (h != 0 || m != 0)
+		{
+			float ans = (m* 5.5) - (h * 30);
+			if (ans < 0)
+				ans = -ans;
+			if (ans > 180)	
+				cout << 360 - ans << endl;
+			else
+				cout << ans << endl; cout;
+			cin >> h >> a >> m;
+		}
+}
