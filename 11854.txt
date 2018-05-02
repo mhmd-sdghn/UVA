@@ -1,0 +1,20 @@
+#include <iostream>
+#include<stdio.h>
+using namespace std;
+
+int main()
+{
+	int a, b, c, asqure, bsqure, csqure;
+	cin >> a >> b >> c;
+	while (a != 0 && b != 0 && c != 0){
+		asqure = a*a;
+		bsqure = b*b;
+		csqure = c*c;
+		if ((asqure + bsqure == csqure) || (bsqure + csqure == asqure) || (csqure + asqure == bsqure))
+			cout << "right\n";
+		else 
+			cout << "wrong\n";
+		cin >> a >> b >> c;
+	}
+	return 0;
+}
