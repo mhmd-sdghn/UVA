@@ -1,0 +1,50 @@
+#include <iostream>
+using namespace std ;
+
+int factores(int x)
+{
+	int sum = 0 ;
+	for(int i = 1 ; i <= x / 2 ; i++)
+		if(x % i == 0)
+			sum += i ;
+	return sum ;
+}
+
+int counter(int x)
+{
+	int count = 0 ;
+	while(x > 0)
+	{
+		x = x / 10 ;
+		count++ ;
+	}
+	return count ;
+}
+
+int main()
+{
+	long long int a ;
+	cout << "PERFECTION OUTPUT" << endl ;
+	while(cin >> a)
+	{
+		int i ;
+		if(a == 0) break ;
+		int c = counter(a) ;
+		if(a == factores(a)) {
+			for(i = 0 ; i < 5 - c ; i++)
+				cout << " "  ;
+			cout << a << "  " << "PERFECT" << endl ;
+		}
+		else if(a < factores(a)) {
+			for(i = 0 ; i < 5 - c ; i++)
+				cout << " " ;
+			cout << a << "  " << "ABUNDANT" << endl ;
+		}
+		else if(a > factores(a)) {
+			for(i = 0 ; i < 5 - c ; i++)
+				cout << " " ;
+			cout << a << "  " << "DEFICIENT" << endl ;
+		}
+	}
+	cout << "END OF OUTPUT" << endl ;
+}
