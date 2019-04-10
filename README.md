@@ -1,6 +1,3 @@
 # UVA
 My UVA code
-با تمام قدرت کپی کنید
-ولی به قصد یادگیری
- :)
- 
+##Please feel free to use for educational purposes
